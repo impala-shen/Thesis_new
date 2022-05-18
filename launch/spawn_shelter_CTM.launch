@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="data_collector" type="GotoShelter.py" name="GotoShelter" output="screen" />
+
+</launch>

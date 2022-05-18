@@ -1,0 +1,25 @@
+<launch>
+    
+    <node pkg="data_collector" type="luminance.py" name="lumin_ind" args="pub {pub args}"/>
+    <node pkg="data_collector" type="humidity.py" name="humidity_ind" args="pub {pub args}"/>
+    <node pkg="data_collector" type="Temp_sensor.py" name="Temp_ind" args="pub {pub args}"/>
+    <node pkg="data_collector" type="visibility.py" name="visibility_ind" args="pub {pub args}"/>
+    
+    <arg name="weather"/>
+    <node name="weather_execution" pkg="data_collector" type="weather_ind.py" args="$(arg weather)" output="screen" />
+    <arg name="time"/>
+    <node name="time_execution" pkg="data_collector" type="TOD.py" args="$(arg time)" />
+    
+
+    <node pkg="data_collector" type="acoustic_sensor.py" name="acoustics_sensor" args="pub {pub args}"/>
+    <!--node pkg="data_collector" type="accident_ind.py" name="accident_ind" args="pub {pub args}"/-->
+    <arg name="case"/>
+    <node name="case_execution" pkg="data_collector" type="accident_ind.py" args="$(arg case)" output="screen" />
+    <!--node pkg="data_collector" type="accident_ind.py" name="accident_ind" output="screen" /-->
+
+    <arg name="extent"/>
+    <node name="extent_execution" pkg="data_collector" type="extent.py" args="$(arg extent)" />   
+    
+
+
+</launch>

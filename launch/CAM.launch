@@ -1,0 +1,10 @@
+<launch>
+
+  <include file="$(find data_collector)/launch/Goto_PS_CTM.launch"/>
+  <include file="$(find data_collector)/launch/spawn_acci_CJM.launch"/>
+  <include file="$(find data_collector)/launch/spawn_garbage_CJM.launch"/>
+  <include file="$(find data_collector)/launch/spawn_shelter_CTM.launch"/>
+  <node pkg="data_collector" type="Wait.py" name="Wait" output="screen"/>
+  <node pkg="data_collector" type="GotoDumping.py" name="GotoDumping" output="screen"/>
+  <node pkg="data_collector" type="explore.py" name="explore" output="screen"/>
+</launch>

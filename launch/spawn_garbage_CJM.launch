@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="data_collector" type="PickupGarbage.py" name="PickupGarbage" output="screen" />
+
+</launch>

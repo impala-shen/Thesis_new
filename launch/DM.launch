@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="data_collector" type="Priority_list_try.py" name="Priority_list" output="screen"/>
+  <node pkg="data_collector" type="Projection.py" name="Projection" output="screen"/>
+</launch>

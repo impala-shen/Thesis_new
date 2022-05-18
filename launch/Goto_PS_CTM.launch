@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="data_collector" type="GotoPowerStation.py" name="GotoPowerStation" output="screen" />
+</launch>

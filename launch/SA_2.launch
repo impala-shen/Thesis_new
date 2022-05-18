@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="data_collector" type="route_condition.py" name="route_condition" output="screen"/>   
+    <node pkg="data_collector" type="travelled_dis.py" name="travelled_dis" args="pub {pub args}" />
+    <node pkg="data_collector" type="Power_status.py" name="Power_status" output="screen" />
+    <node pkg="data_collector" type="space_status.py" name="LS_status" output="screen" />
+
+    
+</launch>

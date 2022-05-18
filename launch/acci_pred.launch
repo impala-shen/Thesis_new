@@ -1,0 +1,17 @@
+<launch>
+    <node pkg="data_collector" type="time_pub.py" name="time_pub" args="pub {pub args}"/>
+    <node pkg="data_collector" type="weather_pub.py" name="weather_pub" args="pub {pub args}"/>
+    <node pkg="data_collector" type="luminance.py" name="lumin_ind" args="pub {pub args}"/>
+    <node pkg="data_collector" type="humidity.py" name="humidity_ind" args="pub {pub args}"/>
+    <node pkg="data_collector" type="Temp.py" name="Temp_ind" args="pub {pub args}"/>
+    <node pkg="data_collector" type="visibility.py" name="visibility_ind" args="pub {pub args}"/>  
+    
+
+    <node pkg="data_collector" type="weather_sub.py" name="weather_sub" args="pub {pub args}" />
+
+    <node pkg="data_collector" type="weather_ind.py" name="weather_ind" args="pub {pub args}"/>  
+    <node pkg="data_collector" type="TOD_ind.py" name="TOD_ind" args="pub {pub args}"/> 
+    <node pkg="data_collector" type="route_condition.py" name="route_condition" args="pub {pub args}"/>   
+
+        <node pkg="data_collector" type="future_acci_pred.py" name="future_acci_pred" output="screen" />
+</launch>

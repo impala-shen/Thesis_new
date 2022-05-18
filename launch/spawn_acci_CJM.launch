@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="data_collector" type="CheckPotentialAcci.py" name="CheckPotentialAcci" output="screen" />
+</launch>

@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="data_collector" type="voice_pub.py" name="voice_pub" args="pub {pub args}"/>
+
+  <arg name="people" default="$(find data_collector)/urdf/people.urdf"/>
+
+
+  <node pkg="data_collector" type="danger_case_pub.py" name="danger_case_pub">
+    <param name="people" value="$(arg people)" />
+  </node>
+
+  <node pkg="data_collector" type="accident_sub.py" name="accident_sub" output="screen" />
+
+</launch>

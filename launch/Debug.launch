@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="data_collector" type="CheckPotentialAcci.py" name="CheckPotentialAcci" output="screen"/>
+    <node pkg="data_collector" type="GotoPowerStation.py" name="GotoPowerStation" output="screen"/>
+    <node pkg="data_collector" type="PickupGarbage.py" name="PickupGarbage" output="screen"/>
+    <node pkg="data_collector" type="Wait.py" name="Wait" output="screen"/>
+    <node pkg="data_collector" type="GotoShelter.py" name="GotoShelter" output="screen"/>
+    <node pkg="data_collector" type="GotoDamping.py" name="GotoDamping" output="screen"/>
+</launch>

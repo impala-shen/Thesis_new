@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="data_collector" type="luminance.py" name="lumin_ind" args="pub {pub args}"/>
+    <node pkg="data_collector" type="visibility.py" name="visibility_ind" args="pub {pub args}"/>
+
+    <arg name="in_case"/>
+    <node name="internal_execution" pkg="data_collector" type="misfunction_ind.py" args="$(arg in_case)" output="screen" />
+
+</launch>

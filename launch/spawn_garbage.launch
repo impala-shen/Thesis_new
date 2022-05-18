@@ -1,0 +1,16 @@
+<launch>
+
+  <arg name="obstacle" default="$(find data_collector)/urdf/obstacle.urdf"/>
+  <arg name="rubber" default="$(find data_collector)/urdf/rubber.urdf"/>
+
+  <node pkg="data_collector" type="spawn_gabage1.py" name="spawn_garbage_urdf1">
+    <param name="obstacle" value="$(arg obstacle)" />
+  </node>
+
+  <node pkg="data_collector" type="spawn_gabage2.py" name="spawn_garbage_urdf2">
+    <param name="rubber" value="$(arg rubber)" />
+  </node>
+
+  <node pkg="data_collector" type="garbage_sub.py" name="garbage_sub" output="screen" />
+
+</launch>

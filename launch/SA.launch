@@ -1,0 +1,8 @@
+<launch>
+
+  <include file="$(find data_collector)/launch/weather.launch"/>
+  <include file="$(find data_collector)/launch/spawn_acci.launch"/>
+  <include file="$(find data_collector)/launch/spawn_garbage single.launch"/>
+
+
+</launch>
